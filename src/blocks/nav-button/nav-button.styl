@@ -1,0 +1,53 @@
+.nav-button
+    border none
+    border-radius none
+    background transparent
+    padding 0
+    width 28px
+    height 30px
+    cursor pointer
+    position absolute
+    top 6px
+    left 50%
+    margin-left -14px
+    outline none
+    display block
+    z-index 120px
+    +above(480px)
+        display none
+
+    &__in:after
+    &__in:before
+        content ""
+        position absolute
+        left 0
+        top -9px
+
+    &__in:after
+        top 9px
+
+    &__in
+        position relative
+        display block
+
+    &__in
+    &__in:after
+    &__in:before
+        width 100%
+        height 4px
+        background-color #8cd9ff
+        // transition all 0.1s
+        backface-visibility hidden
+        border-radius 0px
+        transition background-color .3s linear, transform .1s linear
+        ^[0]:hover &
+            background-color #fff
+
+.nav-button.on .nav-button__in
+    background-color transparent
+
+.nav-button.on .nav-button__in:before
+    transform rotate(45deg) translate(5px, 5px)
+
+.nav-button.on .nav-button__in:after
+    transform rotate(-45deg) translate(7px, -8px)

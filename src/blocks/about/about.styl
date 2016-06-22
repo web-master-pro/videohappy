@@ -1,0 +1,474 @@
+.about
+    display block
+    width 100%
+    position relative
+
+    &__in
+        section-row()
+
+    &__left
+        section-left()
+        display flex
+        flex-flow row nowrap
+        justify-content center
+
+    &__mid
+        section-mid()
+
+    &__right
+        section-right()
+        // order -1
+        // +above(800px)
+        //     order 3
+
+    &__title
+        color #39c
+        font(Bold)
+        font-size 18px
+        line-height 1.2
+        text-transform uppercase
+        margin 0 0 1.4em
+
+
+    &__photo
+        display block
+        max-width 100%
+        margin 0 auto 20px
+        +above(480px)
+            transform-origin top right
+            transform scale(.8)
+            margin -60px 0 0 5px
+            display inline-block
+            float right
+        +above(800px)
+            margin 5px 0 20px 5px
+        +above(1200px)
+            transform none
+            margin 5px 0 20px 20px
+
+    &__text
+        color #3b3b3b
+        font()
+        font-size 16px
+        line-height 1.2
+        margin 0 0 .8em
+        span
+            color #39c
+            font(Bold)
+
+    &__button
+        display inline-block
+        color #fffefe
+        font(Medium)
+        font-size 16px
+        line-height 1
+        background-color #8dc8f5
+        text-transform uppercase
+        text-decoration none
+        border none
+        outline none
+        cursor pointer
+        padding 15px
+        margin 0
+        &:hover
+            background-color #8cd9ff
+            background-image linear-gradient(184deg, #8cd9ff 0%, #3fbaf7 100%)
+            text-decoration none
+
+    &__numbers
+        list-style none
+        display block
+        width 100%
+        font-size 0
+        text-align center
+        padding 0
+        margin 0
+
+    &__number
+        display inline-block
+        vertical-align top
+        width 170px
+        color #3b3b3b
+        font()
+        font-size 16px
+        line-height 1.2
+        text-align center
+        padding 130px 5px 0
+        margin 15px 0
+        position relative
+        +above(1200px)
+            width 220px
+        &:nth-child(1)::before
+            content ""
+            sprite($icon_about_content_numbers_1)
+            position absolute
+            top 0
+            left 50%
+            margin-left -66px
+        &:nth-child(2)::before
+            content ""
+            sprite($icon_about_content_numbers_2)
+            position absolute
+            top 0
+            left 50%
+            margin-left -63px
+        &:nth-child(3)::before
+            content ""
+            sprite($icon_about_content_numbers_3)
+            position absolute
+            top 0
+            left 50%
+            margin-left -69px
+        &:nth-child(4)::before
+            content ""
+            sprite($icon_about_content_numbers_4)
+            position absolute
+            top 0
+            left 50%
+            margin-left -67px
+
+    &__box
+        display none
+        flex 1 1 auto
+        padding 40px 20px
+        position relative
+        +above(1200px)
+            padding 20px 20px 20px 40px
+        &.active
+            display block
+
+        &--0
+            padding 40px 20px 20px
+            align-self center
+            +above(1200px)
+                padding 20px 20px 20px 40px
+            & .about__title
+                text-align center
+                +above(480px)
+                    text-align left
+
+        &--1
+            padding 190px 20px 20px
+            align-self center
+            +above(1200px)
+                padding 190px 20px 20px
+            &::before
+                content ""
+                sprite($icon_about_content_history)
+                position absolute
+                top 20px
+                left 50%
+                margin-left -75px
+
+        &--2
+            padding 250px 20px 20px
+            align-self center
+            +above(1200px)
+                padding 250px 20px 20px
+            &::before
+                content ""
+                sprite($icon_about_content_inspiration)
+                position absolute
+                top 20px
+                left 50%
+                margin-left -110px
+            & .about__title
+                text-align center
+                max-width 390px
+                margin-left auto
+                margin-right auto
+            & .about__text
+                text-align center
+                margin-left auto
+                margin-right auto
+                +above(800px)
+                    max-width 295px
+
+        &--3
+            padding 170px 20px 20px
+            align-self center
+            +above(1200px)
+                padding 170px 40px 20px 50px
+            &::before
+                content ""
+                sprite($icon_about_content_team)
+                position absolute
+                top 20px
+                left 50%
+                margin-left -90px
+            & .about__text
+                text-align left
+                margin-left auto
+                margin-right auto
+                &--team-1
+                    +above(800px)
+                        max-width 320px
+                        margin-left 0
+                        margin-right 0
+
+            & .about__team
+                display flex
+                flex-flow row nowrap
+                justify-content flex-start
+                align-items flex-start
+            & .about__team-header
+                flex 1 0 auto
+                color #3b3b3b
+                font(Medium)
+                font-size 16px
+                line-height 1.2
+                margin 0 10px 0 0
+
+        &--4
+            padding 250px 20px 20px
+            align-self center
+            +above(1200px)
+                padding 250px 20px 20px
+            &::before
+                content ""
+                sprite($icon_about_content_abilities)
+                position absolute
+                top 20px
+                left 50%
+                margin-left -100px
+            & .about__text
+                text-align center
+                margin-left auto
+                margin-right auto
+                +above(800px)
+                    max-width 320px
+
+        &--5
+            padding 20px 5px
+            align-self center
+            +above(1200px)
+                padding 20px 5px
+
+        &--6
+            padding 40px 20px
+            text-align center
+            align-self center
+            +above(1200px)
+                padding 40px 20px
+            & .about__title
+                text-align center
+                margin-left auto
+                margin-right auto
+                +above(800px)
+                    max-width 390px
+            & .about__text
+                text-align left
+                margin-left auto
+                margin-right auto
+                margin-bottom 1.2em
+                +above(800px)
+                    max-width 390px
+
+
+.about-menu
+    list-style none
+    padding 0
+    margin 0
+    display flex
+    flex-flow row wrap
+
+    &__item
+        display block
+        flex 1 1 33.3333%
+        height 110px
+        background-color #fff
+        position relative
+        &--1
+            border-top 1px solid #a0a0a0
+            border-right 1px solid #a0a0a0
+            border-bottom 1px solid #a0a0a0
+            border-left 1px solid #fff
+        &--2
+            border-top 1px solid #a0a0a0
+            border-right 1px solid #a0a0a0
+            border-bottom 1px solid #a0a0a0
+            border-left none
+        &--3
+            border-top 1px solid #a0a0a0
+            border-right 1px solid #fff
+            border-bottom 1px solid #a0a0a0
+            border-left none
+        &--4
+            border-top none
+            border-right 1px solid #a0a0a0
+            border-bottom 1px solid #a0a0a0
+            border-left 1px solid #fff
+        &--5
+            border-top none
+            border-right 1px solid #a0a0a0
+            border-bottom 1px solid #a0a0a0
+            border-left none
+        &--6
+            border-top none
+            border-right 1px solid #fff
+            border-bottom 1px solid #a0a0a0
+            border-left none
+
+
+        +above(480px)
+            height 200px
+        +above(800px)
+            flex 1 1 50%
+            &--1
+                border-top 1px solid #fff
+                border-right 1px solid #a0a0a0
+                border-bottom 1px solid #a0a0a0
+                border-left 1px solid #a0a0a0
+            &--2
+                border-top 1px solid #fff
+                border-right 1px solid #a0a0a0
+                border-bottom 1px solid #a0a0a0
+                border-left none
+            &--3
+                border-top none
+                border-right 1px solid #a0a0a0
+                border-bottom 1px solid #a0a0a0
+                border-left 1px solid #a0a0a0
+            &--4
+                border-top none
+                border-right 1px solid #a0a0a0
+                border-bottom 1px solid #a0a0a0
+                border-left none
+            &--5
+                border-top none
+                border-right 1px solid #a0a0a0
+                border-bottom 1px solid #a0a0a0
+                border-left 1px solid #a0a0a0
+            &--6
+                border-top none
+                border-right 1px solid #a0a0a0
+                border-bottom 1px solid #a0a0a0
+                border-left none
+
+    &__link
+        display block
+        position absolute
+        top -1px
+        right -1px
+        bottom -1px
+        left -1px
+        text-decoration none
+        color #3b3b3b
+        padding-top 80px
+        transition all .3s ease
+        &::before
+            opacity 1
+            transition opacity .3s ease
+            content ""
+            position absolute
+            top 40%
+            left 50%
+            transform-origin center center
+            transform scale(.6)
+            +above(480px)
+                transform none
+            ^[0]__item--1 &
+                sprite($icon_about_history)
+                margin-top -29px
+                margin-left -21px
+            ^[0]__item--2 &
+                sprite($icon_about_inspiration)
+                margin-top -29px
+                margin-left -20px
+            ^[0]__item--3 &
+                sprite($icon_about_team)
+                margin-top -29px
+                margin-left -21px
+            ^[0]__item--4 &
+                sprite($icon_about_abilities)
+                margin-top -32px
+                margin-left -17px
+            ^[0]__item--5 &
+                sprite($icon_about_numbers)
+                margin-top -22px
+                margin-left -47px
+            ^[0]__item--6 &
+                sprite($icon_about_advice)
+                margin-top -30px
+                margin-left -25px
+        &::after
+            opacity 0
+            transition opacity .3s ease
+
+        .active &
+        .hover &
+            color white
+            background #8cd9ff
+            &::before
+                opacity 0
+            &::after
+                opacity 1
+                content ""
+                position absolute
+                top 40%
+                left 50%
+                transform-origin center center
+                transform scale(.6)
+                +above(480px)
+                    transform none
+        +above(480px)
+            padding-top 135px
+
+    &__item--1.active &__link::after
+    &__item--1.hover &__link::after
+        sprite($icon_about_history_hover)
+        margin-top -32px
+        margin-left -36px
+    &__item--2.active &__link::after
+    &__item--2.hover &__link::after
+        sprite($icon_about_inspiration_hover)
+        margin-top -38px
+        margin-left -35px
+    &__item--3.active &__link::after
+    &__item--3.hover &__link::after
+        sprite($icon_about_team_hover)
+        margin-top -30px
+        margin-left -53px
+    &__item--4.active &__link::after
+    &__item--4.hover &__link::after
+        sprite($icon_about_abilities_hover)
+        margin-top -30px
+        margin-left -46px
+    &__item--5.active &__link::after
+    &__item--5.hover &__link::after
+        sprite($icon_about_numbers_hover)
+        margin-top -19px
+        margin-left -46px
+    &__item--6.active &__link::after
+    &__item--6.hover &__link::after
+        sprite($icon_about_advice_hover)
+        margin-top -30px
+        margin-left -29px
+
+
+    &__caption
+        font()
+        font-size 10px
+        line-height 1.2
+        text-align center
+        text-transform uppercase
+        padding 0 2px
+        margin 0
+        +above(480px)
+            font-size 12px
+        +above(600px)
+            font-size 14px
+
+    &__tip
+        font(Light)
+        font-size 10px
+        text-transform lowercase
+        text-align center
+        margin .5em 0 0
+        display none
+        +above(480px)
+            font-size 12px
+            display block
+        +above(600px)
+            font-size 14px
+

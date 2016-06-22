@@ -1,0 +1,108 @@
+input()
+    display block
+    width 100%
+    height 24px
+    background-color white
+    border 1px solid #7d7d7d
+    color #979899
+    font()
+    font-size 14px
+    line-height 22px
+    padding 0 8px
+    outline none
+    position relative
+    &:focus
+        background-color white
+        border 2px solid #8cd9ff
+
+
+    &::-webkit-input-placeholder
+        color #979899
+        opacity 1
+    &::-moz-placeholder
+        color #979899
+        opacity 1
+    &:-moz-placeholder
+        color #979899
+        opacity 1
+    &:-ms-input-placeholder
+        color #979899
+        opacity 1
+    &:input-placeholder
+        color #979899
+        opacity 1
+
+    // &:focus::-webkit-input-placeholder
+    //     color #979899
+    // &:focus::-moz-placeholder
+    //     color #979899
+    // &:focus:-moz-placeholder
+    //     color #979899
+    // &:focus:-ms-input-placeholder
+    //     color #979899
+    // &:focus:input-placeholder
+    //     color #979899
+
+    &:-webkit-autofill
+        -webkit-box-shadow inset 0 0 0 50px rgba(255,255,255,1) !important
+        background-color white !important
+        -webkit-text-fill-color #000 !important;
+        color #000 !important
+
+textarea()
+    display block
+    width 100%
+    height 90px
+    background-color white
+    border 1px solid #7d7d7d
+    color #979899
+    font()
+    font-size 14px
+    line-height 1.2
+    outline none
+    resize none
+    padding 4px 8px
+    position relative
+    &:focus
+        background-color white
+        border 2px solid #8cd9ff
+
+.input
+    input()
+    margin 0 0 10px
+
+.textarea
+    display block
+    width 100%
+    position relative
+
+    &__textarea
+        textarea()
+        margin 0 0 10px
+        position relative
+        z-index 1
+
+    &__placeholder
+        display inline-block
+        color #979899
+        font()
+        font-size 14px
+        line-height 1
+        position absolute
+        top 5px
+        left 8px
+        z-index 2
+
+
+label.invalid-field
+    display block
+    width 100%
+    color red
+    font()
+    font-size 10px
+    line-height 1
+    text-align center
+    padding 0px 2px
+    margin -5px auto 7px
+    &.hidden
+        display none !important

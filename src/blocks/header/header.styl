@@ -1,0 +1,134 @@
+.header
+    width 100%
+    position relative
+    overflow hidden
+
+    &__video
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%,-50%)
+        display none
+        +above(1000px)
+            display block
+
+    &__video-cover
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        background url(img/header-bg.jpg) no-repeat center top
+        background-size cover
+        +below(999px)
+            display block !important
+
+    &__video-overlay
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        background-color rgba(70,108,127,.5)
+        display none
+        +below(999px)
+            display none !important
+
+    &__content
+        container(1000px)
+        padding 110px 20px 60px
+        z-index 2
+        +above(480px)
+            padding 220px 20px 60px
+        +above(1000px)
+            height 100vh
+
+    &__title
+        color #fefefe
+        font(Bold)
+        font-size 38px
+        letter-spacing 0.1em
+        text-transform uppercase
+        text-align center
+        margin 0 0 .6em
+
+        +above(480px)
+            font-size 44px
+
+
+    &__subtitle
+        color #fefefe
+        font(Medium)
+        font-size 18px
+        letter-spacing 0.01em
+        text-transform uppercase
+        text-align center
+        margin 0
+        +above(480px)
+            font-size 24px
+
+    &__region
+        color #fefefe
+        font(Medium)
+        font-size 20px
+        letter-spacing 0.01em
+        text-align center
+        margin 0.3em 0 0
+        +above(480px)
+            font-size 24px
+
+    &__headers
+        margin 0 auto 6em
+        +above(992px)
+            padding 0 20px
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%,-50%)
+
+    &__link-down
+        display block
+        width 50px
+        height 50px
+        outline none
+        margin 0 auto
+        position absolute
+        bottom 30px
+        left 50%
+        margin-left -25px
+        animation link-down 4s ease 1.5s infinite normal
+        &::before
+            display block
+            content ""
+            sprite($icon_link_down)
+            opacity 1
+            transition opacity .3s ease
+            position absolute
+        &::after
+            display block
+            content ""
+            sprite($icon_link_down_hover)
+            opacity 0
+            transition opacity .3s ease
+            position absolute
+        &:hover
+            animation none
+            &::before
+                opacity 0
+            &::after
+                opacity 1
+        +above(480px)
+            bottom 60px
+
+@keyframes link-down
+    0%
+        transform translateY(0)
+    7%
+        transform translateY(4px)
+    15%
+        transform translateY(0)
+    22%
+        transform translateY(4px)
+    30%
+        transform translateY(0)
+

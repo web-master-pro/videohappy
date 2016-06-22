@@ -1,0 +1,15 @@
+include ../nav-button/nav-button
+mixin nav()
+    nav.nav&attributes(attributes)
+        +nav-button(class="nav__button")
+        ul.nav__list
+            li.nav__item
+                a(href="#about").nav__link.nav__link--about Обо мне
+            li.nav__item
+                a(href="#portfolio").nav__link.nav__link--portfolio Портфолио
+            li.nav__item
+                a(href="#feedbacks").nav__link.nav__link--feedbacks Отзывы
+            li.nav__item
+                a(href="#services").nav__link.nav__link--services Услуги
+            li.nav__item
+                a(href="#contacts").nav__link.nav__link--contacts Контакты

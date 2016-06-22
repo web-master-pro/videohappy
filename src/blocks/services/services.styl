@@ -1,0 +1,220 @@
+.services
+    background #eee
+    +above(1000px)
+        background #fff url(img/services-bg.png) repeat-y center center
+    &__in
+        section-row()
+
+    &__left
+        section-left()
+        display flex
+        flex-flow row nowrap
+        justify-content center
+        align-items center
+
+    &__mid
+        section-mid()
+
+    &__right
+        section-right()
+        // order -1
+        // +above(800px)
+        //     order 3
+
+    &__box
+        display none
+        flex 0 1 auto
+        padding 40px 20px
+        margin 0 auto
+        text-align center
+        +above(800px)
+            max-width 390px
+        &.active
+            display block
+
+    &__title
+        color #39c
+        font(Bold)
+        font-size 18px
+        text-transform uppercase
+        text-align center
+        margin 0 0 1em
+        ^[0]__box--0 &
+            color #3b3b3b
+            +above(800px)
+                text-align left
+
+    &__text
+        color #3b3b3b
+        font()
+        font-size 16px
+        line-height 1.2
+        text-align center
+        margin 0 0 2em
+        ^[0]__box--0 &
+            margin 0
+            +above(800px)
+                text-align left
+
+    &__button
+        display inline-block
+        color #fefefe
+        font(Medium)
+        font-size 16px
+        line-height 1
+        text-decoration none
+        text-transform uppercase
+        background-color #8cd9ff
+        border none
+        outline none
+        cursor pointer
+        padding 15px
+        margin 0 auto
+        &:hover
+            background-color #8cd9ff
+            background-image linear-gradient(184deg, #8cd9ff 0%, #3fbaf7 100%)
+            text-decoration none
+
+.serv-menu
+    display block
+    list-style none
+    width 100%
+    padding 0
+    margin 0
+
+    &__item
+        display block
+        width 100%
+        height 100px
+        padding 0
+        margin 0
+        position relative
+        +above(480px)
+            height 200px
+        &::before
+            content ""
+            position absolute
+            bottom 0
+            transition all .5s ease
+            transform scale(.5)
+            +above(480px)
+                transform scale(.9)
+        &.hover
+        &.active
+            &::before
+                transform scale(.5)
+                +above(480px)
+                    transform scale(1)
+
+        &--1
+            background-color #9283cc
+            &::before
+                transform-origin left bottom
+                sprite($icon_services_1)
+                left 10px
+                +above(1200px)
+                    left 40px
+        &--2
+            background-color #8cd9ff
+            &::before
+                transform-origin right bottom
+                sprite($icon_services_2)
+                right 10px
+                +above(1200px)
+                    right 60px
+        &--3
+            background-color #d2d2d2
+            &::before
+                transform-origin left bottom
+                sprite($icon_services_3)
+                left 10px
+                +above(1200px)
+                    left 60px
+
+
+
+    &__link
+        display block
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        text-decoration none
+
+    &__caption
+        color #fffefe
+        font(Bold)
+        font-size 20px
+        line-height 1.2
+        text-transform uppercase
+        opacity 1
+        transition opacity .5s ease
+        max-width 160px
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        margin 0
+        span
+            font(Medium)
+            text-transform lowercase
+        ^[0]__item--1 &
+            text-align right
+            right 25px
+        ^[0]__item--2 &
+            text-align right
+            left 50px
+        ^[0]__item--3 &
+            text-align right
+            right 25px
+        .hover &
+        .active &
+            opacity 0
+        +above(1200px)
+            max-width 200px
+            font-size 24px
+        +above(1200px)
+            font-size 28px
+
+    &__overlay
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        display block
+        background-color rgba(0,0,0,.3)
+        opacity 0
+        transition opacity .5s ease
+        .hover &
+        .active &
+            opacity 1
+
+    &__button
+        display inline-block
+        color #fffefe
+        font(Medium)
+        font-size 16px
+        line-height 1
+        text-decoration none
+        background-color #8dc8f5
+        border none
+        outline none
+        cursor pointer
+        padding 15px
+        margin 0
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        right 32px
+        &:hover
+            text-decoration none
+        .active &
+            background-color #8cd9ff
+            background-image linear-gradient(184deg, #8cd9ff 0%, #3fbaf7 100%)
+        ^[0]__item--1 &
+            right 25px
+        ^[0]__item--2 &
+            left 50px
+        ^[0]__item--3 &
+            right 25px

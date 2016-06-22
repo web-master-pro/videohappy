@@ -1,0 +1,66 @@
+container(w = 1000px)
+    display block
+    max-width w
+    margin-left auto
+    margin-right auto
+    position relative
+
+fs($min-font, $max-font, $min-width = 320px, $max-width=1100px)
+    font-size: $min-font
+    @media (min-width: $min-width)
+        font-size: s('calc( %s + (%s - %s) * ((100vw - %s) / (%s - %s)) )', $min-font, remove-unit($max-font), remove-unit($min-font), $min-width, remove-unit($max-width), remove-unit($min-width))
+    @media (min-width: $max-width)
+        font-size: $max-font
+
+font(face = Regular)
+    if face == Light
+        font-family "Geometria-Light", serif
+        font-weight 300
+        font-style normal
+    if face == Regular
+        font-family "Geometria-Regular", serif
+        font-weight 400
+        font-style normal
+    if face == Medium
+        font-family "Geometria-Medium", serif
+        font-weight 500
+        font-style normal
+    if face == Bold
+        font-family "Geometria-Bold", serif
+        font-weight 700
+        font-style normal
+    if face == Extra
+        font-family "Geometria-ExtraBlack", serif
+        font-weight 700
+        font-style normal
+
+
+section-row()
+    display flex
+    flex-flow row wrap
+    justify-content space-around
+    width 100%
+    max-width 1200px
+    padding 0
+    margin 0 auto
+    position relative
+    +above(800px)
+        flex-flow row nowrap
+
+section-left()
+    flex 1 1 100%
+    +above(800px)
+        flex 1 1 500px
+
+section-mid()
+    flex 0 0 200px
+    background-color #466c7f
+    background-image: linear-gradient(to right, #466c7f 0%, #4a7184 50%, #466c7f 100%);
+    display none
+    +above(1000px)
+        display block
+
+section-right()
+    flex 1 1 100%
+    +above(800px)
+        flex 1 1 500px

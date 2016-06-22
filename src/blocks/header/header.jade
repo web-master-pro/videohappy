@@ -1,0 +1,13 @@
+mixin header()
+    header.header&attributes(attributes)
+        video.header__video(loop muted autoplay)
+        .header__video-cover
+        .header__video-overlay
+        .header__content
+            .header__headers
+                h1.header__title Тимур Салихов
+                p.header__subtitle свадебный видеооператор
+                p.header__region#region
+            a(href="#about").header__link-down.js-scrollto
+
+

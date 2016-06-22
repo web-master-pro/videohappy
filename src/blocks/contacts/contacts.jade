@@ -1,0 +1,38 @@
+mixin contacts()
+    footer.contacts&attributes(attributes)
+        .contacts__in
+            .contacts__left
+                .contacts__box
+                    h2.contacts__title Контакты
+                    a(href="tel:+79373034455").contacts__phone +7-937-303-44-55
+                    p.contacts__skype TimurSLV
+                    a(href="mailto:t.studio@mail.ru").contacts__email t.studio@mail.ru
+                    h3.contacts__subtitle По всем имеющимся вопросам, оставьте заявку на обратную связь
+                    form(action="assets/sendmail.php" method="POST").form-contacts#form-contacts.contacts__form
+                        input(type="hidden" name="form" value="form-contacts")
+                        .form-contacts__row
+                            .form-contacts__left
+                                input(type="text" name="name" placeholder="ФИО").input
+                                input(type="tel" name="phone" placeholder="Телефон").input.js-phone-field
+                                input(type="email" name="email" placeholder="Email").input
+                            .form-contacts__right
+                                .textarea
+                                    .textarea__placeholder Задать вопрос
+                                    textarea(name="message").textarea__textarea
+                        button(type="submit").form-contacts__button Оставить заявку
+            .contacts__mid
+            .contacts__right
+                ul.social-menu
+                    li.social-menu__item
+                        a(href="http://vk.com/coolvideo" title="ВКонтакте" target="_blank" rel="nofollow").social-menu__link.social-menu__link--vk
+                    li.social-menu__item
+                        a(href="https://www.youtube.com/channel/UCr2NBh2gQ_Hh8_SsY8Sc6yA" title="YouTube" target="_blank" rel="nofollow").social-menu__link.social-menu__link--youtube
+                    li.social-menu__item
+                        a(href="https://www.facebook.com/timursalikhov" title="Facebook" target="_blank" rel="nofollow").social-menu__link.social-menu__link--facebook
+                    li.social-menu__item
+                        a(href="https://vimeo.com/videohappy" title="Vimeo" target="_blank" rel="nofollow").social-menu__link.social-menu__link--vimeo
+                    li.social-menu__item
+                        a(href="https://www.instagram.com/travellife.tv" title="Instagram" target="_blank" rel="nofollow").social-menu__link.social-menu__link--instagram
+                    li.social-menu__item
+                        a(href="https://ok.ru/timursalikhov" title="Одноклассники" target="_blank" rel="nofollow").social-menu__link.social-menu__link--ok
+
