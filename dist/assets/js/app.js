@@ -77,6 +77,63 @@ $('.browsehappy').click(function() {
 
 $(document).ready(function(){
 
+    var validatorContactForm = $("#contact-form").validate({
+        rules: {
+            name: {required: true},
+            phone: {required: true},
+            email: {required: true, email: true},
+            message: {required: true}
+        },
+        messages: {
+            name: {required: "Это поле должно быть заполнено"},
+            phone: {required: "Это поле должно быть заполнено"},
+            email: {required: "Это поле должно быть заполнено", email: "Неправильный формат email"},
+            message: {required: "Это поле должно быть заполнено"}
+        },
+        focusInvalid: false,
+        errorClass: "invalid-field",
+        submitHandler: function(form) {
+            form.preventDefault;
+            $.ajax({
+                type: "POST",
+                url: $(form).attr("action"),
+                data: $(form).serialize()
+            }).done(function() {
+                $.magnificPopup.open({
+                    items:{
+                        src:$('#popup-thankyou')
+                    },
+                    type:'inline',
+                    midClick: true,
+                    removalDelay: 500,
+                    mainClass: 'mfp-zoom-in',
+                    overflowY: 'scroll',
+                    fixedContentPos: false
+                });
+                // alert("Спасибо! Заявка отправлена!")
+            });
+            return false;
+        }
+    });
+
+    $("#contact-form input" ).focus(function() {
+        $(this).next(".invalid-field").addClass("hidden");
+    });
+
+    $("#contact-form textarea" ).focus(function() {
+        $(this).next(".invalid-field").addClass("hidden");
+    });
+
+    $("#contact-form button").click(function (e) {
+        $("#contact-form .invalid-field").removeClass("hidden").css({"display":""});
+        validatorContactForm.resetForm();
+        return true;
+    });
+
+});
+
+$(document).ready(function(){
+
     var validatorFormContacts = $("#form-contacts").validate({
         rules: {
             name: {required: true},
@@ -99,18 +156,17 @@ $(document).ready(function(){
                 url: $(form).attr("action"),
                 data: $(form).serialize()
             }).done(function() {
-                // $.magnificPopup.open({
-                //     items:{
-                //         src:$('#popup-thankyou')
-                //     },
-                //     type:'inline',
-                //     midClick: true,
-                //     removalDelay: 500,
-                //     mainClass: 'mfp-zoom-in',
-                //     overflowY: 'scroll',
-                //     fixedContentPos: false
-                // });
-                alert("Спасибо! Заявка отправлена!")
+                $.magnificPopup.open({
+                    items:{
+                        src:$('#popup-thankyou')
+                    },
+                    type:'inline',
+                    midClick: true,
+                    removalDelay: 500,
+                    mainClass: 'mfp-zoom-in',
+                    overflowY: 'scroll',
+                    fixedContentPos: false
+                });
             });
             return false;
         }
@@ -131,83 +187,6 @@ $(document).ready(function(){
     });
 
 });
-
-(function () {
-
-    // VIDEO BACKGROUND
-
-    // var bv = new Bideo();
-    // bv.init({
-    //     // Video element
-    //     videoEl: document.querySelector('.header__video'),
-
-    //     // Container element
-    //     container: document.querySelector('.header'),
-
-    //     // Resize
-    //     resize: true,
-
-    //     // Array of objects containing the src and type
-    //     // of different video formats to add
-    //     src: [
-    //         {
-    //             src: 'assets/video/video-1.mp4',
-    //             type: 'video/mp4'
-    //         },
-    //         {
-    //             src: 'assets/video/video-1.ogv',
-    //             type: 'video/ogv'
-    //         },
-    //         {
-    //             src: 'assets/video/video-1.webm',
-    //             type: 'video/webm'
-    //         }
-
-    //     ],
-
-    //     // What to do once video loads (initial frame)
-    //     onLoad: function () {
-    //         document.querySelector('.header__video-cover').style.display = 'none';
-    //         document.querySelector('.header__video-overlay').style.display = 'block';
-    //     }
-    // });
-
-}());
-
-// $( function () {
-//     if ( sessionStorage.reloadAfterPageLoad ) {
-//         alert( "Hello world" );
-//         sessionStorage.reloadAfterPageLoad = false;
-//     }
-// } )
-// https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
-
-//
-// You can for example (simplified) do something like this when the page is about to reload:
-
-// window.onbeforeunload = function() {
-//     localStorage.setItem(name, $('#inputName').val());
-//     localStorage.setItem(email, $('#inputEmail').val());
-//     localStorage.setItem(phone, $('#inputPhone').val());
-//     localStorage.setItem(subject, $('#inputSubject').val());
-//     localStorage.setItem(detail, $('#inputDetail').val());
-//     // ...
-// }
-// Web Storage works synchronously so this can work here. Optionally you can store the data for each blur event on the elements where the data is entered.
-
-// At page load you can check:
-
-// window.onload = function() {
-
-//     var name = localStorage.getItem(name);
-//     if (name !== null) $('#inputName').val(name);
-
-//     // ...
-// }
-// getItem returns null if the data does not exist.
-
-// Use sessionStorage instead of localStorage if you want to store only temporary.
-
 
 $(document).ready(function(){
 
@@ -310,73 +289,7 @@ $(document).ready(function(){
         overflowY: 'scroll'
     });
 
-
     $(".popup-portfolio__video").fitVids();
-
-    // $('.js-order-button').click(function (){
-    //     $.magnificPopup.open({
-    //         items:{
-    //             src:$('#form-order')
-    //             // src:$('#popup-thankyou')
-    //         },
-    //         type:'inline',
-    //         midClick: true,
-    //         removalDelay: 500,
-    //         mainClass: 'mfp-zoom-in',
-    //         overflowY: 'scroll',
-    //         fixedContentPos: false,
-    //         callbacks: {
-    //             close: function() {
-    //                 validator.resetForm();
-    //             }
-    //         }
-    //     });
-    // });
-
-    // var validator = $("#form-order").validate({
-    //     rules: {
-    //         name: {required: true},
-    //         phone: {required: true}
-    //     },
-    //     messages: {
-    //         name: {required: "Это поле должно быть заполнено"},
-    //         phone: {required: "Это поле должно быть заполнено"}
-    //     },
-    //     focusInvalid: false,
-    //     errorClass: "invalid-field",
-    //     submitHandler: function(form) {
-    //         form.preventDefault;
-    //         $.ajax({
-    //             type: "POST",
-    //             url: $(form).attr("action"),
-    //             data: $(form).serialize()
-    //         }).done(function() {
-    //             $.magnificPopup.open({
-    //                 items:{
-    //                     src:$('#popup-thankyou')
-    //                 },
-    //                 type:'inline',
-    //                 midClick: true,
-    //                 removalDelay: 500,
-    //                 mainClass: 'mfp-zoom-in',
-    //                 overflowY: 'scroll',
-    //                 fixedContentPos: false
-    //             });
-    //             // yaCounter36986630.reachGoal("zaiavka");
-    //         });
-    //         return false;
-    //     }
-    // });
-
-    // $("#form-order input" ).focus(function() {
-    //     $(this).next(".invalid-field").addClass("hidden");
-    // });
-
-    // $("#form-order button").click(function (e) {
-    //     $("#form-order .invalid-field").removeClass("hidden").css({"display":""});
-    //     validator.resetForm();
-    //     return true;
-    // });
 
     $(".js-close-button").click(function (e) {
         e.preventDefault();
@@ -403,6 +316,28 @@ $(document).ready(function(){
 //             };
 //         });
 // });
+
+$(document).ready(function(){
+
+    $(".textarea__textarea")
+        .focus(function() {
+            $(this).prev(".textarea__placeholder").fadeOut(300);
+            console.log("focus");
+        })
+        .blur(function() {
+            if ($(this).val().length == 0) {
+                $(this).prev(".textarea__placeholder").fadeIn(300);
+                console.log("blur");
+            }
+        });
+
+    $(".textarea__placeholder").click(function(){
+        $(this).fadeOut(300);
+        $(this).next(".textarea__textarea").focus();
+        console.log("click");
+    })
+
+});
 
 $(document).ready(function(){
 
@@ -435,27 +370,5 @@ $(document).ready(function(){
                 $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1000);
             };
         });
-
-});
-
-$(document).ready(function(){
-
-    $(".textarea__textarea")
-        .focus(function() {
-            $(this).prev(".textarea__placeholder").fadeOut(300);
-            console.log("focus");
-        })
-        .blur(function() {
-            if ($(this).val().length == 0) {
-                $(this).prev(".textarea__placeholder").fadeIn(300);
-                console.log("blur");
-            }
-        });
-
-    $(".textarea__placeholder").click(function(){
-        $(this).fadeOut(300);
-        $(this).next(".textarea__textarea").focus();
-        console.log("click");
-    })
 
 });

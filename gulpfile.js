@@ -179,11 +179,11 @@ gulp.task('js:plugins', function () {
         .pipe(gulp.dest("dist/assets/js/"))
 });
 
-gulp.task('js:region', function () {
-    return gulp.src("src/js/region.js")
+gulp.task('js:header', function () {
+    return gulp.src("src/js/header.js")
         .pipe(plumber(options.plumber))
         .pipe(rigger())
-        .pipe(rename('region.js'))
+        .pipe(rename('header.js'))
         .pipe(gulp.dest("dist/assets/js/"))
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
@@ -196,7 +196,7 @@ gulp.task('js:jquery', function() {
         .pipe(gulp.dest("dist/assets/js/"))
 });
 
-gulp.task('js', ['js:region','js:jquery','js:plugins','js:app']);
+gulp.task('js', ['js:header','js:jquery','js:plugins','js:app']);
 
 // IMAGES, PNG SPRITE, Favicons
 

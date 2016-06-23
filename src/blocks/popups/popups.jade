@@ -1,7 +1,7 @@
 mixin popup-portfolio-1()
     .popup-portfolio.popup&attributes(attributes)#popup-portfolio-1
         .popup-portfolio__video
-            <iframe src="https://player.vimeo.com/video/169748512" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/169748512" width="640" height="360" allowfullscreen></iframe>
         .popup-portfolio__data
             .popup-portfolio__info
                 .popup-portfolio__detailes Детали проекта
@@ -25,7 +25,7 @@ mixin popup-portfolio-1()
 mixin popup-portfolio-2()
     .popup-portfolio.popup&attributes(attributes)#popup-portfolio-2
         .popup-portfolio__video
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/o_RXpSxoOEc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/o_RXpSxoOEc?rel=0&amp;showinfo=0" allowfullscreen></iframe>
         .popup-portfolio__data
             .popup-portfolio__info
                 .popup-portfolio__detailes Детали проекта
@@ -49,7 +49,7 @@ mixin popup-portfolio-2()
 mixin popup-portfolio-3()
     .popup-portfolio.popup&attributes(attributes)#popup-portfolio-3
         .popup-portfolio__video
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/1mumPwwdnZQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1mumPwwdnZQ?rel=0&amp;showinfo=0" allowfullscreen></iframe>
         .popup-portfolio__data
             .popup-portfolio__info
                 .popup-portfolio__detailes Детали проекта
@@ -72,7 +72,7 @@ mixin popup-portfolio-3()
 mixin popup-portfolio-4()
     .popup-portfolio.popup&attributes(attributes)#popup-portfolio-4
         .popup-portfolio__video
-            <iframe src="https://player.vimeo.com/video/75089806" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/75089806" width="640" height="360" allowfullscreen></iframe>
         .popup-portfolio__data
             .popup-portfolio__info
                 .popup-portfolio__detailes Детали проекта
@@ -95,7 +95,7 @@ mixin popup-portfolio-4()
 mixin popup-portfolio-5()
     .popup-portfolio.popup&attributes(attributes)#popup-portfolio-5
         .popup-portfolio__video
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/wqdmwt07Biw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wqdmwt07Biw?rel=0&amp;showinfo=0" allowfullscreen></iframe>
         .popup-portfolio__data
             .popup-portfolio__info
                 .popup-portfolio__detailes Детали проекта
@@ -118,7 +118,7 @@ mixin popup-portfolio-5()
 mixin popup-portfolio-6()
     .popup-portfolio.popup&attributes(attributes)#popup-portfolio-6
         .popup-portfolio__video
-            <iframe src="https://player.vimeo.com/video/159190321" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/159190321" width="640" height="360" allowfullscreen></iframe>
         .popup-portfolio__data
             .popup-portfolio__info
                 .popup-portfolio__detailes Детали проекта
@@ -138,4 +138,8 @@ mixin popup-portfolio-6()
             a(href="contact.html").popup-portfolio__button Оставить заявку
         button.popup-portfolio__close-btn.js-close-button закрыть <span>х</span>
 
-
+mixin popup-thankyou()
+    .popup-thankyou.popup#popup-thankyou
+        h3.popup-thankyou__title Спасибо!
+        p.popup-thankyou__text Спасибо, что оставили заявку. Мы свяжемся с Вами в самое ближайшее время.
+        button.button.popup-thankyou__button.js-close-button Закрыть

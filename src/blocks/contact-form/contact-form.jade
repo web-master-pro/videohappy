@@ -1,0 +1,28 @@
+mixin contact-form()
+    form(action="assets/sendmail.php" method="POST").contact-form#contact-form&attributes(attributes)
+        input(type="hidden" name="form" value="contact-form")
+        h1.contact-form__title Заявка на обратную связь
+        p.contact-form__subtitle Опишите задачу, оставьте контактные данные и&nbsp;я&nbsp;свяжусь с&nbsp;вами
+        .contact-form__main
+            .contact-form__group
+                input(type="text" name="name" placeholder="ФИО").input.input--big.contact-form__input
+                input(type="tel" name="phone" placeholder="Телефон").input.input--big.contact-form__input.js-phone-field
+                input(type="email" name="email" placeholder="Email").input.input--big.contact-form__input
+            .contact-form__textarea-wrapper
+                .textarea.textarea--big
+                    .textarea__placeholder Дата, место, сколько часов съемок и&nbsp;ваши пожелания
+                    textarea(name="message").textarea__textarea
+            h3.contact-form__group-caption Какое видео вы хотите?
+            .contact-form__radio-group
+                .radio
+                    input(type="radio" name="service" id="contact-form-radio-1" value="Свадебное видео" checked).radio__radio
+                    label(for="contact-form-radio-1").radio__label Свадебное
+                .radio
+                    input(type="radio" name="service" id="contact-form-radio-2" value="Love-story").radio__radio
+                    label(for="contact-form-radio-2").radio__label Love-story
+                .radio
+                    input(type="radio" name="service" id="contact-form-radio-3" value="Семейное видео").radio__radio
+                    label(for="contact-form-radio-3").radio__label Семейное
+
+            .contact-form__button-wrapper
+                button(type="submit").contact-form__button Оставить заявку

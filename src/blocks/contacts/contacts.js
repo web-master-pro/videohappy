@@ -22,18 +22,17 @@ $(document).ready(function(){
                 url: $(form).attr("action"),
                 data: $(form).serialize()
             }).done(function() {
-                // $.magnificPopup.open({
-                //     items:{
-                //         src:$('#popup-thankyou')
-                //     },
-                //     type:'inline',
-                //     midClick: true,
-                //     removalDelay: 500,
-                //     mainClass: 'mfp-zoom-in',
-                //     overflowY: 'scroll',
-                //     fixedContentPos: false
-                // });
-                alert("Спасибо! Заявка отправлена!")
+                $.magnificPopup.open({
+                    items:{
+                        src:$('#popup-thankyou')
+                    },
+                    type:'inline',
+                    midClick: true,
+                    removalDelay: 500,
+                    mainClass: 'mfp-zoom-in',
+                    overflowY: 'scroll',
+                    fixedContentPos: false
+                });
             });
             return false;
         }

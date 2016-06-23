@@ -25,7 +25,6 @@
     <link rel="icon" type="image/png" href="assets/img/favicons/android-chrome-192x192.png" sizes="192x192">
     <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-144x144.png">
@@ -35,20 +34,31 @@
         !function(){function e(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function t(e){return window.localStorage&&localStorage.font_css_cache&&localStorage.font_css_cache_file===e}function n(){if(window.localStorage&&window.XMLHttpRequest)if(t(o))a(localStorage.font_css_cache);else{var n=new XMLHttpRequest;n.open("GET",o,!0),e(n,"load",function(){4===n.readyState&&(a(n.responseText),localStorage.font_css_cache=n.responseText,localStorage.font_css_cache_file=o)}),n.send()}else{var c=document.createElement("link");c.href=o,c.rel="stylesheet",c.type="text/css",document.getElementsByTagName("head")[0].appendChild(c),document.cookie="font_css_cache"}}function a(e){var t=document.createElement("style");t.innerHTML=e,document.getElementsByTagName("head")[0].appendChild(t)}var o="assets/css/fonts.min.css";window.localStorage&&localStorage.font_css_cache||document.cookie.indexOf("font_css_cache")>-1?n():e(window,"load",n)}();
     </script>
     <style>
-        body,html{height:100%}html{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0}*,:after,:before{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}.header,body{position:relative}body{overflow-x:hidden;overflow-y:scroll;min-width:300px;color:#333;background-color:#fff;font-family:"Geometria-Regular",serif;font-size:16px;font-weight:400;font-style:normal;-webkit-font-smoothing:subpixel-antialiased!important;line-height:1}body -webkit-backface-visibility hidden -moz-backface-visibility hidden{-ms-backface-visibility:hidden}body:after{display:table;clear:both;content:""}.hidden{display:none}.header{overflow:hidden;width:100%}.header__video{position:absolute;top:50%;left:50%;display:none;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.header__video-cover,.header__video-overlay{position:absolute;top:0;right:0;bottom:0;left:0}.header__video-cover{background:url(assets/img/header-bg.jpg) no-repeat center top;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.header__video-overlay{display:none;background-color:rgba(70,108,127,.5)}.header__content{position:relative;z-index:2;display:block;max-width:1000px;margin-right:auto;margin-left:auto;padding:110px 20px 60px}.header__title{margin:0 0 .6em;text-align:center;letter-spacing:.1em;text-transform:uppercase;color:#fefefe;font-family:"Geometria-Bold",serif;font-size:38px;font-weight:700;font-style:normal}.header__region,.header__subtitle{text-align:center;letter-spacing:.01em;color:#fefefe;font-family:"Geometria-Medium",serif;font-weight:500;font-style:normal}.header__subtitle{text-transform:uppercase;margin:0;font-size:18px}.header__region{margin:.3em 0 0;font-size:20px}.header__headers{margin:0 auto 6em}.header__link-down{position:absolute;bottom:30px;left:50%;display:block;width:50px;height:50px;margin:0 auto 0 -25px;-webkit-animation:link-down 4s ease 1.5s infinite normal;-moz-animation:link-down 4s ease 1.5s infinite normal;-o-animation:link-down 4s ease 1.5s infinite normal;animation:link-down 4s ease 1.5s infinite normal;outline:none}.header__link-down::after,.header__link-down::before{position:absolute;display:block;content:"";-webkit-transition:opacity .3s ease;-moz-transition:opacity .3s ease;-o-transition:opacity .3s ease;transition:opacity .3s ease;opacity:1}.header__link-down::after{opacity:0}.header__link-down:hover{-webkit-animation:none;-moz-animation:none;-o-animation:none;animation:none}.header__link-down:hover::before{opacity:0}.header__link-down:hover::after{opacity:1}@media only screen and (min-width:480px){.header__content{padding:220px 20px 60px}.header__title{font-size:44px}.header__region,.header__subtitle{font-size:24px}.header__link-down{bottom:60px}}@media only screen and (min-width:992px){.header__headers{position:absolute;top:50%;left:50%;padding:0 20px;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}}@media only screen and (min-width:1000px){.header__video{display:block}.header__content{height:100vh}}@media only screen and (max-width:999px){.header__video-cover{display:block!important}.header__video-overlay{display:none!important}}@-moz-keyframes link-down{0%,15%,30%{-moz-transform:translateY(0);transform:translateY(0)}22%,7%{-moz-transform:translateY(4px);transform:translateY(4px)}}@-webkit-keyframes link-down{0%,15%,30%{-webkit-transform:translateY(0);transform:translateY(0)}22%,7%{-webkit-transform:translateY(4px);transform:translateY(4px)}}@-o-keyframes link-down{0%,15%,30%{-o-transform:translateY(0);transform:translateY(0)}22%,7%{-o-transform:translateY(4px);transform:translateY(4px)}}@keyframes link-down{0%,15%,30%{-webkit-transform:translateY(0);-moz-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}22%,7%{-webkit-transform:translateY(4px);-moz-transform:translateY(4px);-o-transform:translateY(4px);transform:translateY(4px)}}
+        body,html{height:100%}html{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0}*,:after,:before{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}body{position:relative;overflow-x:hidden;overflow-y:scroll;min-width:300px;color:#333;background-color:#fff;font-family:"Geometria-Regular",serif;font-size:16px;font-weight:400;font-style:normal;-webkit-font-smoothing:subpixel-antialiased!important;line-height:1}body -webkit-backface-visibility hidden -moz-backface-visibility hidden{-ms-backface-visibility:hidden}body:after{display:table;clear:both;content:""}.hidden{display:none}:focus,a,input{outline:none}.header{position:relative;overflow:hidden;width:100%}.header__video{position:absolute;top:50%;left:50%;display:none;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.header__video-cover,.header__video-overlay{position:absolute;top:0;right:0;bottom:0;left:0}.header__video-cover{background:url(assets/img/header-bg.jpg) no-repeat center top;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.header__video-overlay{display:none;background-color:rgba(70,108,127,.1)}.header__content{position:relative;z-index:2;display:block;max-width:1000px;margin-right:auto;margin-left:auto;padding:110px 20px 60px}.header__title{margin:0 0 .6em;text-align:center;letter-spacing:.1em;text-transform:uppercase;color:#fefefe;font-family:"Geometria-Bold",serif;font-size:38px;font-weight:700;font-style:normal}.header__region,.header__subtitle{text-align:center;letter-spacing:.01em;color:#fefefe;font-family:"Geometria-Medium",serif;font-weight:500;font-style:normal}.header__subtitle{text-transform:uppercase;margin:0;font-size:18px}.header__region{margin:.3em 0 0;font-size:20px}.header__headers{margin:0 auto 6em}.header__link-down{position:absolute;bottom:30px;left:50%;display:block;width:50px;height:50px;margin:0 auto 0 -25px;-webkit-animation:link-down 4s ease 1.5s infinite normal;-moz-animation:link-down 4s ease 1.5s infinite normal;-o-animation:link-down 4s ease 1.5s infinite normal;animation:link-down 4s ease 1.5s infinite normal;outline:none}.header__link-down::after,.header__link-down::before{position:absolute;display:block;content:"";-webkit-transition:opacity .3s ease;-moz-transition:opacity .3s ease;-o-transition:opacity .3s ease;transition:opacity .3s ease;opacity:1}.header__link-down::after{opacity:0}.header__link-down:hover{-webkit-animation:none;-moz-animation:none;-o-animation:none;animation:none}.header__link-down:hover::before{opacity:0}.header__link-down:hover::after{opacity:1}@media only screen and (min-width:480px){.header__content{padding:220px 20px 60px}.header__title{font-size:44px}.header__region,.header__subtitle{font-size:24px}.header__link-down{bottom:60px}}@media only screen and (min-width:992px){.header__headers{position:absolute;top:50%;left:50%;padding:0 20px;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}}@media only screen and (min-width:1000px){.header__video{display:block}.header__content{height:100vh}}@media only screen and (max-width:999px){.header__video-cover{display:block!important}.header__video-overlay{display:none!important}}@-moz-keyframes link-down{0%,15%,30%{-moz-transform:translateY(0);transform:translateY(0)}22%,7%{-moz-transform:translateY(4px);transform:translateY(4px)}}@-webkit-keyframes link-down{0%,15%,30%{-webkit-transform:translateY(0);transform:translateY(0)}22%,7%{-webkit-transform:translateY(4px);transform:translateY(4px)}}@-o-keyframes link-down{0%,15%,30%{-o-transform:translateY(0);transform:translateY(0)}22%,7%{-o-transform:translateY(4px);transform:translateY(4px)}}@keyframes link-down{0%,15%,30%{-webkit-transform:translateY(0);-moz-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}22%,7%{-webkit-transform:translateY(4px);-moz-transform:translateY(4px);-o-transform:translateY(4px);transform:translateY(4px)}}
     </style>
     <noscript>
-        <link rel="stylesheet" href="assets/css/style.min.css?rev=c08fc27491ed83a98dcee162b9e2eaa5">
+        <link rel="stylesheet" href="assets/css/style.min.css?rev=fabd53460bff8e68f0f7a95284139907">
     </noscript>
 </head>
 
-<body>
-    <!--[if IE]>
-    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com" target="_blank"> обновите браузер</a> для лучшего отображения сайта.</p><![endif]-->
+<body class="page">
+    <script>
+        var regions = [
+              {id: "ufa", caption: "в УФЕ"},
+              {id: "moscow", caption: "в Москве"},
+              {id: "kazan", caption: "в Казани"},
+              {id: "ural", caption: "в Укатеринбурге"},
+              {id: "piter", caption: "в Санкт-Петербурге"}
+          ];
+          var backgroundVideos = [
+              "video-1",
+              "video-2",
+              "video-3"
+          ];
+    </script>
     <header class="header" id="header">
         <video loop="loop" muted="muted" autoplay="autoplay" class="header__video"></video>
         <div class="header__video-cover"></div>
-        <div class="header__video-overlay"></div>
         <div class="header__content">
             <div class="header__headers">
                 <h1 class="header__title">Тимур Салихов</h1>
@@ -58,6 +68,7 @@
             <a href="#about" class="header__link-down js-scrollto"></a>
         </div>
     </header>
+    <script src="assets/js/header.min.js?rev=15cd904c3876eb63b4ef1c150fdf7d65"></script>
     <div class="about" id="about">
         <nav class="nav">
             <button class="nav-button nav__button"><span class="nav-button__in"></span>
@@ -333,47 +344,47 @@
                     <h3 class="services__title">Свадебное видео</h3>
                     <p class="services__text">Цена на свадебное видео, напрямую зависит от ваших желаний, количества часов съемки, сезона, места проведения, количества ассистентов и времени на монтаж.
                         <br>Поэтому, цена подбирается индивидуально.</p>
-                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="contact.html?video=wedding" class="services__button">Оставить заявку</a>
+                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="contact.html" class="services__button">Оставить заявку</a>
                 </div>
                 <div class="services__box services__box--2">
                     <h3 class="services__title">Love-story</h3>
                     <p class="services__text">Цена на Love-story, напрямую зависит от ваших желаний, количества часов съемки, сезона, места проведения и количества ассистентов.
                         <br>Поэтому, цена подбирается индивидуально.</p>
-                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="contact.html?video=love-story" class="services__button">Оставить заявку</a>
+                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="contact.html" class="services__button">Оставить заявку</a>
                 </div>
                 <div class="services__box services__box--3">
                     <h3 class="services__title">Семейное видео</h3>
                     <p class="services__text">Цена на семейное видео, напрямую зависит от ваших желаний, количества часов съемки и места проведения.
                         <br>Поэтому, цена подбирается индивидуально.</p>
-                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="contact.html?video=family" class="services__button">Оставить заявку</a>
+                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="contact.html" class="services__button">Оставить заявку</a>
                 </div>
             </div>
             <div class="services__mid"></div>
             <div class="services__right">
                 <ul class="serv-menu">
                     <li class="serv-menu__item serv-menu__item--1">
-                        <a href="#" class="serv-menu__link">
+                        <div class="serv-menu__link">
                             <h3 class="serv-menu__caption">Свадебное <span>видео</span></h3>
                             <div class="serv-menu__overlay">
                                 <button class="serv-menu__button">Просмотреть</button>
                             </div>
-                        </a>
+                        </div>
                     </li>
                     <li class="serv-menu__item serv-menu__item--2">
-                        <a href="#" class="serv-menu__link">
+                        <div class="serv-menu__link">
                             <h3 class="serv-menu__caption">Love-story</h3>
                             <div class="serv-menu__overlay">
                                 <button class="serv-menu__button">Просмотреть</button>
                             </div>
-                        </a>
+                        </div>
                     </li>
                     <li class="serv-menu__item serv-menu__item--3">
-                        <a href="#" class="serv-menu__link">
+                        <div class="serv-menu__link">
                             <h3 class="serv-menu__caption">Семейное <span>видео</span></h3>
                             <div class="serv-menu__overlay">
                                 <button class="serv-menu__button">Просмотреть</button>
                             </div>
-                        </a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -433,7 +444,7 @@
     <div class="hidden">
         <div id="popup-portfolio-1" class="popup-portfolio popup">
             <div class="popup-portfolio__video">
-                <iframe src="https://player.vimeo.com/video/169748512" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/169748512" width="640" height="360" allowfullscreen></iframe>
             </div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
@@ -465,7 +476,7 @@
         </div>
         <div id="popup-portfolio-2" class="popup-portfolio popup">
             <div class="popup-portfolio__video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/o_RXpSxoOEc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o_RXpSxoOEc?rel=0&amp;showinfo=0" allowfullscreen></iframe>
             </div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
@@ -497,7 +508,7 @@
         </div>
         <div id="popup-portfolio-3" class="popup-portfolio popup">
             <div class="popup-portfolio__video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1mumPwwdnZQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1mumPwwdnZQ?rel=0&amp;showinfo=0" allowfullscreen></iframe>
             </div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
@@ -528,7 +539,7 @@
         </div>
         <div id="popup-portfolio-4" class="popup-portfolio popup">
             <div class="popup-portfolio__video">
-                <iframe src="https://player.vimeo.com/video/75089806" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/75089806" width="640" height="360" allowfullscreen></iframe>
             </div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
@@ -559,7 +570,7 @@
         </div>
         <div id="popup-portfolio-5" class="popup-portfolio popup">
             <div class="popup-portfolio__video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/wqdmwt07Biw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wqdmwt07Biw?rel=0&amp;showinfo=0" allowfullscreen></iframe>
             </div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
@@ -590,7 +601,7 @@
         </div>
         <div id="popup-portfolio-6" class="popup-portfolio popup">
             <div class="popup-portfolio__video">
-                <iframe src="https://player.vimeo.com/video/159190321" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <iframe src="https://player.vimeo.com/video/159190321" width="640" height="360" allowfullscreen></iframe>
             </div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
@@ -619,26 +630,21 @@
             <button class="popup-portfolio__close-btn js-close-button">закрыть <span>х</span>
             </button>
         </div>
+        <div id="popup-thankyou" class="popup-thankyou popup">
+            <h3 class="popup-thankyou__title">Спасибо!</h3>
+            <p class="popup-thankyou__text">Спасибо, что оставили заявку. Мы свяжемся с Вами в самое ближайшее время.</p>
+            <button class="button popup-thankyou__button js-close-button">Закрыть</button>
+        </div>
     </div>
     <script>
-        var regions = [
-              {id: "ufa", caption: "в УФЕ"},
-              {id: "moscow", caption: "в Москве"},
-              {id: "kazan", caption: "в Казани"},
-              {id: "ural", caption: "в Укатеринбурге"},
-              {id: "piter", caption: "в Санкт-Петербурге"}
-          ];
-    </script>
-    <script src="assets/js/region.min.js?rev=09912b54dbd20aa07c3d2dbf25a89b2d"></script>
-    <script>
-        var ms=document.createElement("link");ms.rel="stylesheet";ms.href="assets/css/style.min.css?rev=c08fc27491ed83a98dcee162b9e2eaa5";document.getElementsByTagName("head")[0].appendChild(ms);
+        var ms=document.createElement("link");ms.rel="stylesheet";ms.href="assets/css/style.min.css?rev=fabd53460bff8e68f0f7a95284139907";document.getElementsByTagName("head")[0].appendChild(ms);
     </script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="assets/js/jquery-2.2.4.min.js"><\/script>')
     </script>
-    <script src="assets/js/plugins.min.js?rev=e680b40a237df45f2e26acdcab2f3f9c"></script>
-    <script src="assets/js/app.min.js?rev=042341209cc45e6d5d265c9446cf5b60"></script>
+    <script src="assets/js/plugins.min.js?rev=955d9268bd4e97db199d419dc6a46fa8"></script>
+    <script src="assets/js/app.min.js?rev=5cbc99bc53829ceebf1e901562c888dc"></script>
 </body>
 
 </html>

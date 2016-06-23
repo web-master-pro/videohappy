@@ -24,7 +24,6 @@
 // Place any jQuery/helper plugins in here.
 
 //= ../libs/magnific-popup/jquery.magnific-popup.js
-//= ../libs/bideo/bideo.js
 // ../libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js
 //= ../libs/jquery.maskedinput/jquery.maskedinput.js
 //= ../libs/jquery-validation/jquery.validate.js

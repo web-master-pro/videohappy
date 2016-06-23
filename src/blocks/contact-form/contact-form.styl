@@ -1,0 +1,135 @@
+.contact-form
+    display block
+    width 100%
+    max-width 930px
+    min-height 700px
+    background-color white
+    box-shadow 0 3px 49px rgba(0, 0, 0, 0.2)
+    padding 50px 20px
+    margin auto
+    position relative
+    flex 1 1 auto
+    +above(768px)
+        margin 20px auto
+    +above(800px)
+        padding 85px 20px 100px
+
+    &__title
+        color #49bcdf
+        font(Extra)
+        font-size 24px
+        line-height 1.2
+        text-align center
+        text-transform uppercase
+        margin 0 auto 1em
+        +above(480px)
+            font-size 30px
+        +above(800px)
+            font-size 34px
+            margin 0 auto 1.5em
+        +above(1000px)
+            font-size 40px
+
+    &__subtitle
+        max-width 500px
+        color #2b2e31
+        font()
+        font-size 18px
+        line-height 1.5
+        text-align center
+        margin 0 auto 1.5em
+        +above(480px)
+            font-size 24px
+            margin 0 auto 2.2em
+        +above(800px)
+            max-width 570px
+
+    &__main
+        display block
+        width 100%
+        max-width 720px
+        position relative
+        margin 0 auto
+        +above(800px)
+            min-height 340px
+
+    &__group
+        display block
+        width 100%
+        max-width 500px
+        margin 0 auto
+        +above(800px)
+            max-width 305px
+            margin 0
+
+    &__textarea-wrapper
+        width 100%
+        max-width 500px
+        margin 0 auto 15px
+        position relative
+        top auto
+        right auto
+        +above(800px)
+            max-width 360px
+            margin 0
+            position absolute
+            right 0
+            top 0
+
+    &__group-caption
+        color #2b2e31
+        font()
+        font-size 16px
+        line-height 1
+        text-align center
+        max-width 500px
+        margin 0 auto 15px
+        +above(800px)
+            margin 0 0 25px
+            text-align left
+
+    &__radio-group
+        display block
+        width 100%
+        max-width 500px
+        position relative
+        text-align center
+        font-size 0
+        margin 0 auto 10px
+        +above(800px)
+            max-width 365px
+            left -30px
+            margin 0
+
+    &__button-wrapper
+        display block
+        width 100%
+        text-align center
+        position relative
+        max-width 500px
+        margin 0 auto
+        +above(800px)
+            max-width 305px
+            // position absolute
+            // bottom 0
+            // left 0
+            margin 0
+
+    &__button
+        display inline-block
+        border none
+        outline none
+        background-color #8cd9ff
+        background-image linear-gradient(180deg, #8cd9ff 0%, #3fbaf7 100%)
+        color #fffefe
+        font(Medium)
+        font-size 16px
+        text-align center
+        line-height 1
+        text-transform uppercase
+        padding 18px 30px
+        margin 20px 0 0
+        cursor pointer
+        &:hover
+            background-image linear-gradient(0deg, #8cd9ff 0%, #3fbaf7 100%)
+
