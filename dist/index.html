@@ -187,7 +187,7 @@
         <div class="portfolio__in">
             <div class="portfolio__left">
                 <ul class="portfolio__menu">
-                    <li data-mfp-src="#popup-portfolio-1" class="portfolio__item js-popup">
+                    <li data-mfp-src="#popup-portfolio-1" class="portfolio__item js-popup-portfolio">
                         <img src="assets/img/portfolio-1.jpg" alt="Максим и Марьяна" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -199,10 +199,10 @@
                             <div class="portfolio__descr">
                                 <p class="portfolio__text">Из утренних съемок сделали маленький видеоклип, которая стала большим сюрпризом вчером...</p>
                             </div>
-                            <button data-mfp-src="#popup-portfolio-1" class="portfolio__button js-popup">Просмотреть</button>
+                            <button data-mfp-src="#popup-portfolio-1" class="portfolio__button js-popup-portfolio">Просмотреть</button>
                         </div>
                     </li>
-                    <li data-mfp-src="#popup-portfolio-2" class="portfolio__item js-popup">
+                    <li data-mfp-src="#popup-portfolio-2" class="portfolio__item js-popup-portfolio">
                         <img src="assets/img/portfolio-2.jpg" alt="Антон и Регина" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -215,10 +215,10 @@
                                 <p class="portfolio__text">Чаще всего, откровения во время свадебного интервью, является сюрпризом для обоих молодожен.</p>
                                 <p class="portfolio__text">Так и произошло во время торжества Антона и Регины</p>
                             </div>
-                            <button data-mfp-src="#popup-portfolio-2" class="portfolio__button js-popup">Просмотреть</button>
+                            <button data-mfp-src="#popup-portfolio-2" class="portfolio__button js-popup-portfolio">Просмотреть</button>
                         </div>
                     </li>
-                    <li data-mfp-src="#popup-portfolio-3" class="portfolio__item js-popup">
+                    <li data-mfp-src="#popup-portfolio-3" class="portfolio__item js-popup-portfolio">
                         <img src="assets/img/portfolio-3.jpg" alt="Рамиль и Мария" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -230,7 +230,7 @@
                             <div class="portfolio__descr">
                                 <p class="portfolio__text">Жених решил преобразовать традиции и подговорил подруг невесты, сделать необычный выкуп. Поступок сильно порадовал избранницу</p>
                             </div>
-                            <button data-mfp-src="#popup-portfolio-3" class="portfolio__button js-popup">Просмотреть</button>
+                            <button data-mfp-src="#popup-portfolio-3" class="portfolio__button js-popup-portfolio">Просмотреть</button>
                         </div>
                     </li>
                 </ul>
@@ -238,7 +238,7 @@
             <div class="portfolio__mid"></div>
             <div class="portfolio__right">
                 <ul class="portfolio__menu portfolio__menu--right">
-                    <li data-mfp-src="#popup-portfolio-4" class="portfolio__item js-popup">
+                    <li data-mfp-src="#popup-portfolio-4" class="portfolio__item js-popup-portfolio">
                         <img src="assets/img/portfolio-4.jpg" alt="Дамир и Даша" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -250,10 +250,10 @@
                             <div class="portfolio__descr">
                                 <p class="portfolio__text">Свадьба Дамира и Даши проходила на ост. Санторини. В начале они не хотели нанимать видеографа, но пообщавшись со мной, изменили свое решение и спустя несколько лет сказали: “Большое&nbsp;спасибо!”</p>
                             </div>
-                            <button data-mfp-src="#popup-portfolio-4" class="portfolio__button js-popup">Просмотреть</button>
+                            <button data-mfp-src="#popup-portfolio-4" class="portfolio__button js-popup-portfolio">Просмотреть</button>
                         </div>
                     </li>
-                    <li data-mfp-src="#popup-portfolio-5" class="portfolio__item js-popup">
+                    <li data-mfp-src="#popup-portfolio-5" class="portfolio__item js-popup-portfolio">
                         <img src="assets/img/portfolio-5.jpg" alt="Марат и Виктория" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -265,10 +265,10 @@
                             <div class="portfolio__descr">
                                 <p class="portfolio__text">Марат и Виктория, не стеснялись показать свои чувства на камеру</p>
                             </div>
-                            <button data-mfp-src="#popup-portfolio-5" class="portfolio__button js-popup">Просмотреть</button>
+                            <button data-mfp-src="#popup-portfolio-5" class="portfolio__button js-popup-portfolio">Просмотреть</button>
                         </div>
                     </li>
-                    <li data-mfp-src="#popup-portfolio-6" class="portfolio__item js-popup">
+                    <li data-mfp-src="#popup-portfolio-6" class="portfolio__item js-popup-portfolio">
                         <img src="assets/img/portfolio-6.jpg" alt="Алексей и Рената" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -280,7 +280,7 @@
                             <div class="portfolio__descr">
                                 <p class="portfolio__text">Марат и Виктория, не стеснялись показать свои чувства на камеру</p>
                             </div>
-                            <button data-mfp-src="#popup-portfolio-6" class="portfolio__button js-popup">Просмотреть</button>
+                            <button data-mfp-src="#popup-portfolio-6" class="portfolio__button js-popup-portfolio">Просмотреть</button>
                         </div>
                     </li>
                 </ul>
@@ -443,9 +443,7 @@
     </footer>
     <div class="hidden">
         <div id="popup-portfolio-1" class="popup-portfolio popup">
-            <div class="popup-portfolio__video">
-                <iframe src="https://player.vimeo.com/video/169748512" width="640" height="360" allowfullscreen></iframe>
-            </div>
+            <div data-src="https://player.vimeo.com/video/169748512?autoplay=1" class="popup-portfolio__video"></div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
                     <div class="popup-portfolio__detailes">Детали проекта</div>
@@ -475,9 +473,7 @@
             </button>
         </div>
         <div id="popup-portfolio-2" class="popup-portfolio popup">
-            <div class="popup-portfolio__video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/o_RXpSxoOEc?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-            </div>
+            <div data-src="https://www.youtube.com/embed/o_RXpSxoOEc?rel=0&amp;amp;showinfo=0&amp;amp;autoplay=1" class="popup-portfolio__video"></div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
                     <div class="popup-portfolio__detailes">Детали проекта</div>
@@ -507,9 +503,7 @@
             </button>
         </div>
         <div id="popup-portfolio-3" class="popup-portfolio popup">
-            <div class="popup-portfolio__video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1mumPwwdnZQ?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-            </div>
+            <div data-src="https://www.youtube.com/embed/1mumPwwdnZQ?rel=0&amp;amp;showinfo=0&amp;amp;autoplay=1" class="popup-portfolio__video"></div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
                     <div class="popup-portfolio__detailes">Детали проекта</div>
@@ -538,9 +532,7 @@
             </button>
         </div>
         <div id="popup-portfolio-4" class="popup-portfolio popup">
-            <div class="popup-portfolio__video">
-                <iframe src="https://player.vimeo.com/video/75089806" width="640" height="360" allowfullscreen></iframe>
-            </div>
+            <div data-src="https://player.vimeo.com/video/75089806?autoplay=1" class="popup-portfolio__video"></div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
                     <div class="popup-portfolio__detailes">Детали проекта</div>
@@ -569,9 +561,7 @@
             </button>
         </div>
         <div id="popup-portfolio-5" class="popup-portfolio popup">
-            <div class="popup-portfolio__video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/wqdmwt07Biw?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-            </div>
+            <div data-src="https://www.youtube.com/embed/wqdmwt07Biw?rel=0&amp;amp;showinfo=0&amp;amp;autoplay=1" class="popup-portfolio__video"></div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
                     <div class="popup-portfolio__detailes">Детали проекта</div>
@@ -600,9 +590,7 @@
             </button>
         </div>
         <div id="popup-portfolio-6" class="popup-portfolio popup">
-            <div class="popup-portfolio__video">
-                <iframe src="https://player.vimeo.com/video/159190321" width="640" height="360" allowfullscreen></iframe>
-            </div>
+            <div data-src="https://player.vimeo.com/video/159190321?autoplay=1" class="popup-portfolio__video"></div>
             <div class="popup-portfolio__data">
                 <div class="popup-portfolio__info">
                     <div class="popup-portfolio__detailes">Детали проекта</div>
@@ -682,7 +670,7 @@
         window.jQuery || document.write('<script src="assets/js/jquery-2.2.4.min.js"><\/script>')
     </script>
     <script src="assets/js/plugins.min.js?rev=955d9268bd4e97db199d419dc6a46fa8"></script>
-    <script src="assets/js/app.min.js?rev=8fc8b5e0384f44325a0e4471440c43eb"></script>
+    <script src="assets/js/app.min.js?rev=956a35e39c5455e3fa5d3fa5235bad05"></script>
 </body>
 
 </html>
