@@ -4,14 +4,13 @@ $(document).ready(function(){
         rules: {
             name: {required: true},
             phone: {required: true},
-            email: {required: true, email: true},
-            message: {required: true}
+            email: {email: true}
         },
         messages: {
             name: {required: "Это поле должно быть заполнено"},
             phone: {required: "Это поле должно быть заполнено"},
-            email: {required: "Это поле должно быть заполнено", email: "Неправильный формат email"},
-            message: {required: "Это поле должно быть заполнено"}
+            email: {email: "Неправильный формат email"},
+            // message: {required: "Это поле должно быть заполнено"}
         },
         focusInvalid: false,
         errorClass: "invalid-field",

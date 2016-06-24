@@ -54,7 +54,7 @@
     $result = @mail($to_email, $subject, $message, $headers);
 
     if ($send_sms) {
-        $sms_message =  $subject + ": " + $data["phone"];
+        $sms_message =  "Заявка с videohappy.ru: "+ $data["name"] + ", " + $data["phone"];
         $body = file_get_contents("http://sms.ru/sms/send?api_id=".$sms_api_id."&to=".$sms_phone."&text=".urlencode(iconv("utf-8","utf-8",$sms_message)));
     };
 

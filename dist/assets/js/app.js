@@ -81,14 +81,12 @@ $(document).ready(function(){
         rules: {
             name: {required: true},
             phone: {required: true},
-            email: {required: true, email: true},
-            message: {required: true}
+            email: {email: true}
         },
         messages: {
             name: {required: "Это поле должно быть заполнено"},
             phone: {required: "Это поле должно быть заполнено"},
-            email: {required: "Это поле должно быть заполнено", email: "Неправильный формат email"},
-            message: {required: "Это поле должно быть заполнено"}
+            email: {email: "Неправильный формат email"}
         },
         focusInvalid: false,
         errorClass: "invalid-field",
@@ -138,14 +136,13 @@ $(document).ready(function(){
         rules: {
             name: {required: true},
             phone: {required: true},
-            email: {required: true, email: true},
-            message: {required: true}
+            email: {email: true}
         },
         messages: {
             name: {required: "Это поле должно быть заполнено"},
             phone: {required: "Это поле должно быть заполнено"},
-            email: {required: "Это поле должно быть заполнено", email: "Неправильный формат email"},
-            message: {required: "Это поле должно быть заполнено"}
+            email: {email: "Неправильный формат email"},
+            // message: {required: "Это поле должно быть заполнено"}
         },
         focusInvalid: false,
         errorClass: "invalid-field",
@@ -286,7 +283,8 @@ $(document).ready(function(){
         midClick: true,
         removalDelay: 500,
         mainClass: 'mfp-zoom-in',
-        overflowY: 'scroll'
+        overflowY: 'scroll',
+        fixedContentPos: true
     });
 
     $(".popup-portfolio__video").fitVids();
@@ -319,28 +317,6 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-    $(".textarea__textarea")
-        .focus(function() {
-            $(this).prev(".textarea__placeholder").fadeOut(300);
-            console.log("focus");
-        })
-        .blur(function() {
-            if ($(this).val().length == 0) {
-                $(this).prev(".textarea__placeholder").fadeIn(300);
-                console.log("blur");
-            }
-        });
-
-    $(".textarea__placeholder").click(function(){
-        $(this).fadeOut(300);
-        $(this).next(".textarea__textarea").focus();
-        console.log("click");
-    })
-
-});
-
-$(document).ready(function(){
-
     $(".serv-menu__item")
         .mouseenter(function(){
             $(this).addClass("hover");
@@ -370,5 +346,27 @@ $(document).ready(function(){
                 $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 1000);
             };
         });
+
+});
+
+$(document).ready(function(){
+
+    $(".textarea__textarea")
+        .focus(function() {
+            $(this).prev(".textarea__placeholder").fadeOut(300);
+            console.log("focus");
+        })
+        .blur(function() {
+            if ($(this).val().length == 0) {
+                $(this).prev(".textarea__placeholder").fadeIn(300);
+                console.log("blur");
+            }
+        });
+
+    $(".textarea__placeholder").click(function(){
+        $(this).fadeOut(300);
+        $(this).next(".textarea__textarea").focus();
+        console.log("click");
+    })
 
 });

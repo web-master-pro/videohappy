@@ -37,7 +37,7 @@
         body,html{height:100%}html{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0}*,:after,:before{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}body{position:relative;overflow-x:hidden;overflow-y:scroll;min-width:300px;color:#333;background-color:#fff;font-family:"Geometria-Regular",serif;font-size:16px;font-weight:400;font-style:normal;-webkit-font-smoothing:subpixel-antialiased!important;line-height:1}body -webkit-backface-visibility hidden -moz-backface-visibility hidden{-ms-backface-visibility:hidden}body:after{display:table;clear:both;content:""}.hidden{display:none}:focus,a,input{outline:none}.header{position:relative;overflow:hidden;width:100%}.header__video{position:absolute;top:50%;left:50%;display:none;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.header__video-cover,.header__video-overlay{position:absolute;top:0;right:0;bottom:0;left:0}.header__video-cover{background:url(assets/img/header-bg.jpg) no-repeat center top;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}.header__video-overlay{display:none;background-color:rgba(70,108,127,.1)}.header__content{position:relative;z-index:2;display:block;max-width:1000px;margin-right:auto;margin-left:auto;padding:110px 20px 60px}.header__title{margin:0 0 .6em;text-align:center;letter-spacing:.1em;text-transform:uppercase;color:#fefefe;font-family:"Geometria-Bold",serif;font-size:38px;font-weight:700;font-style:normal}.header__region,.header__subtitle{text-align:center;letter-spacing:.01em;color:#fefefe;font-family:"Geometria-Medium",serif;font-weight:500;font-style:normal}.header__subtitle{text-transform:uppercase;margin:0;font-size:18px}.header__region{margin:.3em 0 0;font-size:20px}.header__headers{margin:0 auto 6em}.header__link-down{position:absolute;bottom:30px;left:50%;display:block;width:50px;height:50px;margin:0 auto 0 -25px;-webkit-animation:link-down 4s ease 1.5s infinite normal;-moz-animation:link-down 4s ease 1.5s infinite normal;-o-animation:link-down 4s ease 1.5s infinite normal;animation:link-down 4s ease 1.5s infinite normal;outline:none}.header__link-down::after,.header__link-down::before{position:absolute;display:block;content:"";-webkit-transition:opacity .3s ease;-moz-transition:opacity .3s ease;-o-transition:opacity .3s ease;transition:opacity .3s ease;opacity:1}.header__link-down::after{opacity:0}.header__link-down:hover{-webkit-animation:none;-moz-animation:none;-o-animation:none;animation:none}.header__link-down:hover::before{opacity:0}.header__link-down:hover::after{opacity:1}@media only screen and (min-width:480px){.header__content{padding:220px 20px 60px}.header__title{font-size:44px}.header__region,.header__subtitle{font-size:24px}.header__link-down{bottom:60px}}@media only screen and (min-width:992px){.header__headers{position:absolute;top:50%;left:50%;padding:0 20px;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}}@media only screen and (min-width:1000px){.header__video{display:block}.header__content{height:100vh}}@media only screen and (max-width:999px){.header__video-cover{display:block!important}.header__video-overlay{display:none!important}}@-moz-keyframes link-down{0%,15%,30%{-moz-transform:translateY(0);transform:translateY(0)}22%,7%{-moz-transform:translateY(4px);transform:translateY(4px)}}@-webkit-keyframes link-down{0%,15%,30%{-webkit-transform:translateY(0);transform:translateY(0)}22%,7%{-webkit-transform:translateY(4px);transform:translateY(4px)}}@-o-keyframes link-down{0%,15%,30%{-o-transform:translateY(0);transform:translateY(0)}22%,7%{-o-transform:translateY(4px);transform:translateY(4px)}}@keyframes link-down{0%,15%,30%{-webkit-transform:translateY(0);-moz-transform:translateY(0);-o-transform:translateY(0);transform:translateY(0)}22%,7%{-webkit-transform:translateY(4px);-moz-transform:translateY(4px);-o-transform:translateY(4px);transform:translateY(4px)}}
     </style>
     <noscript>
-        <link rel="stylesheet" href="assets/css/style.min.css?rev=fabd53460bff8e68f0f7a95284139907">
+        <link rel="stylesheet" href="assets/css/style.min.css?rev=2efc20a10d6473cef7fc285d3f4b7a96">
     </noscript>
 </head>
 
@@ -137,7 +137,7 @@
                         <br>Обязательно выберите нескольких, на всякий случай, но за 2-3 месяца до свадьбы сделайте окончательный выбор.
                         <br>Вместе с ними продумайте и составьте план действий, лучше в письменной форме.
                         <br>Не экономьте, только с их помощью вы сможете запечатлить этот прекрасный и волнительный день, которым будете наслаждаться вы и ваши дети, внуки.</p>
-                    <h4 class="about__title">Наверняка у вас есть вопросы? <br>Напишите свой вопрос и я в ближайшее время отвечу на него.</h4><a href="contact.html" class="about__button">Оставить заявку</a>
+                    <h4 class="about__title">Наверняка у вас есть вопросы? <br>Напишите свой вопрос и я в ближайшее время отвечу на него.</h4><a href="#contact-form" class="about__button js-popup">Оставить заявку</a>
                 </div>
             </div>
             <div class="about__mid"></div>
@@ -187,7 +187,7 @@
         <div class="portfolio__in">
             <div class="portfolio__left">
                 <ul class="portfolio__menu">
-                    <li class="portfolio__item">
+                    <li data-mfp-src="#popup-portfolio-1" class="portfolio__item js-popup">
                         <img src="assets/img/portfolio-1.jpg" alt="Максим и Марьяна" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -202,7 +202,7 @@
                             <button data-mfp-src="#popup-portfolio-1" class="portfolio__button js-popup">Просмотреть</button>
                         </div>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-mfp-src="#popup-portfolio-2" class="portfolio__item js-popup">
                         <img src="assets/img/portfolio-2.jpg" alt="Антон и Регина" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -218,7 +218,7 @@
                             <button data-mfp-src="#popup-portfolio-2" class="portfolio__button js-popup">Просмотреть</button>
                         </div>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-mfp-src="#popup-portfolio-3" class="portfolio__item js-popup">
                         <img src="assets/img/portfolio-3.jpg" alt="Рамиль и Мария" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -238,7 +238,7 @@
             <div class="portfolio__mid"></div>
             <div class="portfolio__right">
                 <ul class="portfolio__menu portfolio__menu--right">
-                    <li class="portfolio__item">
+                    <li data-mfp-src="#popup-portfolio-4" class="portfolio__item js-popup">
                         <img src="assets/img/portfolio-4.jpg" alt="Дамир и Даша" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -253,7 +253,7 @@
                             <button data-mfp-src="#popup-portfolio-4" class="portfolio__button js-popup">Просмотреть</button>
                         </div>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-mfp-src="#popup-portfolio-5" class="portfolio__item js-popup">
                         <img src="assets/img/portfolio-5.jpg" alt="Марат и Виктория" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -268,7 +268,7 @@
                             <button data-mfp-src="#popup-portfolio-5" class="portfolio__button js-popup">Просмотреть</button>
                         </div>
                     </li>
-                    <li class="portfolio__item">
+                    <li data-mfp-src="#popup-portfolio-6" class="portfolio__item js-popup">
                         <img src="assets/img/portfolio-6.jpg" alt="Алексей и Рената" class="portfolio__img" />
                         <div class="portfolio__cover">
                             <div class="portfolio__headers">
@@ -344,19 +344,19 @@
                     <h3 class="services__title">Свадебное видео</h3>
                     <p class="services__text">Цена на свадебное видео, напрямую зависит от ваших желаний, количества часов съемки, сезона, места проведения, количества ассистентов и времени на монтаж.
                         <br>Поэтому, цена подбирается индивидуально.</p>
-                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="contact.html" class="services__button">Оставить заявку</a>
+                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="#contact-form" class="services__button js-popup">Оставить заявку</a>
                 </div>
                 <div class="services__box services__box--2">
                     <h3 class="services__title">Love-story</h3>
                     <p class="services__text">Цена на Love-story, напрямую зависит от ваших желаний, количества часов съемки, сезона, места проведения и количества ассистентов.
                         <br>Поэтому, цена подбирается индивидуально.</p>
-                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="contact.html" class="services__button">Оставить заявку</a>
+                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="#contact-form" class="services__button js-popup">Оставить заявку</a>
                 </div>
                 <div class="services__box services__box--3">
                     <h3 class="services__title">Семейное видео</h3>
                     <p class="services__text">Цена на семейное видео, напрямую зависит от ваших желаний, количества часов съемки и места проведения.
                         <br>Поэтому, цена подбирается индивидуально.</p>
-                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="contact.html" class="services__button">Оставить заявку</a>
+                    <h3 class="services__title">Оставьте заявку и мы подберем оптимальный вам вариант</h3><a href="#contact-form" class="services__button js-popup">Оставить заявку</a>
                 </div>
             </div>
             <div class="services__mid"></div>
@@ -366,7 +366,7 @@
                         <div class="serv-menu__link">
                             <h3 class="serv-menu__caption">Свадебное <span>видео</span></h3>
                             <div class="serv-menu__overlay">
-                                <button class="serv-menu__button">Просмотреть</button>
+                                <button class="serv-menu__button">Подробнее</button>
                             </div>
                         </div>
                     </li>
@@ -374,7 +374,7 @@
                         <div class="serv-menu__link">
                             <h3 class="serv-menu__caption">Love-story</h3>
                             <div class="serv-menu__overlay">
-                                <button class="serv-menu__button">Просмотреть</button>
+                                <button class="serv-menu__button">Подробнее</button>
                             </div>
                         </div>
                     </li>
@@ -382,7 +382,7 @@
                         <div class="serv-menu__link">
                             <h3 class="serv-menu__caption">Семейное <span>видео</span></h3>
                             <div class="serv-menu__overlay">
-                                <button class="serv-menu__button">Просмотреть</button>
+                                <button class="serv-menu__button">Подробнее</button>
                             </div>
                         </div>
                     </li>
@@ -469,7 +469,7 @@
             </div>
             <p class="popup-portfolio__appeal">У вас есть идея своего видеоклипа?
                 <br>Оставьте заявку и я помогу реализовать идею в ральность</p>
-            <div class="popup-portfolio__btn-wrapper"><a href="contact.html" class="popup-portfolio__button">Оставить заявку</a>
+            <div class="popup-portfolio__btn-wrapper"><a href="#contact-form" class="popup-portfolio__button js-popup">Оставить заявку</a>
             </div>
             <button class="popup-portfolio__close-btn js-close-button">закрыть <span>х</span>
             </button>
@@ -501,7 +501,7 @@
             </div>
             <p class="popup-portfolio__appeal">У вас есть идея своего видеоклипа?
                 <br>Оставьте заявку и я помогу реализовать идею в ральность</p>
-            <div class="popup-portfolio__btn-wrapper"><a href="contact.html" class="popup-portfolio__button">Оставить заявку</a>
+            <div class="popup-portfolio__btn-wrapper"><a href="#contact-form" class="popup-portfolio__button js-popup">Оставить заявку</a>
             </div>
             <button class="popup-portfolio__close-btn js-close-button">закрыть <span>х</span>
             </button>
@@ -532,7 +532,7 @@
             </div>
             <p class="popup-portfolio__appeal">У вас есть идея своего видеоклипа?
                 <br>Оставьте заявку и я помогу реализовать идею в ральность</p>
-            <div class="popup-portfolio__btn-wrapper"><a href="contact.html" class="popup-portfolio__button">Оставить заявку</a>
+            <div class="popup-portfolio__btn-wrapper"><a href="#contact-form" class="popup-portfolio__button js-popup">Оставить заявку</a>
             </div>
             <button class="popup-portfolio__close-btn js-close-button">закрыть <span>х</span>
             </button>
@@ -563,7 +563,7 @@
             </div>
             <p class="popup-portfolio__appeal">У вас есть идея своего видеоклипа?
                 <br>Оставьте заявку и я помогу реализовать идею в ральность</p>
-            <div class="popup-portfolio__btn-wrapper"><a href="contact.html" class="popup-portfolio__button">Оставить заявку</a>
+            <div class="popup-portfolio__btn-wrapper"><a href="#contact-form" class="popup-portfolio__button js-popup">Оставить заявку</a>
             </div>
             <button class="popup-portfolio__close-btn js-close-button">закрыть <span>х</span>
             </button>
@@ -594,7 +594,7 @@
             </div>
             <p class="popup-portfolio__appeal">У вас есть идея своего видеоклипа?
                 <br>Оставьте заявку и я помогу реализовать идею в ральность</p>
-            <div class="popup-portfolio__btn-wrapper"><a href="contact.html" class="popup-portfolio__button">Оставить заявку</a>
+            <div class="popup-portfolio__btn-wrapper"><a href="#contact-form" class="popup-portfolio__button js-popup">Оставить заявку</a>
             </div>
             <button class="popup-portfolio__close-btn js-close-button">закрыть <span>х</span>
             </button>
@@ -625,7 +625,7 @@
             </div>
             <p class="popup-portfolio__appeal">У вас есть идея своего видеоклипа?
                 <br>Оставьте заявку и я помогу реализовать идею в ральность</p>
-            <div class="popup-portfolio__btn-wrapper"><a href="contact.html" class="popup-portfolio__button">Оставить заявку</a>
+            <div class="popup-portfolio__btn-wrapper"><a href="#contact-form" class="popup-portfolio__button js-popup">Оставить заявку</a>
             </div>
             <button class="popup-portfolio__close-btn js-close-button">закрыть <span>х</span>
             </button>
@@ -635,16 +635,54 @@
             <p class="popup-thankyou__text">Спасибо, что оставили заявку. Мы свяжемся с Вами в самое ближайшее время.</p>
             <button class="button popup-thankyou__button js-close-button">Закрыть</button>
         </div>
+        <form action="assets/sendmail.php" method="POST" id="contact-form" class="contact-form popup">
+            <input type="hidden" name="form" value="contact-form" />
+            <h1 class="contact-form__title">Заявка на обратную связь</h1>
+            <p class="contact-form__subtitle">Опишите задачу, оставьте контактные данные и&nbsp;я&nbsp;свяжусь с&nbsp;вами</p>
+            <div class="contact-form__main">
+                <div class="contact-form__group">
+                    <input type="text" name="name" placeholder="ФИО" class="input input--big contact-form__input" />
+                    <input type="tel" name="phone" placeholder="Телефон" class="input input--big contact-form__input js-phone-field" />
+                    <input type="email" name="email" placeholder="Email" class="input input--big contact-form__input" />
+                </div>
+                <div class="contact-form__textarea-wrapper">
+                    <div class="textarea textarea--big">
+                        <div class="textarea__placeholder">Дата, место, сколько часов съемок и&nbsp;ваши пожелания</div>
+                        <textarea name="message" class="textarea__textarea"></textarea>
+                    </div>
+                </div>
+                <h3 class="contact-form__group-caption">Какое видео вы хотите?</h3>
+                <div class="contact-form__radio-group">
+                    <div class="radio">
+                        <input type="radio" name="service" id="contact-form-radio-1" value="Свадебное видео" checked="checked" class="radio__radio" />
+                        <label for="contact-form-radio-1" class="radio__label">Свадебное</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="service" id="contact-form-radio-2" value="Love-story" class="radio__radio" />
+                        <label for="contact-form-radio-2" class="radio__label">Love-story</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="service" id="contact-form-radio-3" value="Семейное видео" class="radio__radio" />
+                        <label for="contact-form-radio-3" class="radio__label">Семейное</label>
+                    </div>
+                </div>
+                <div class="contact-form__button-wrapper">
+                    <button type="submit" class="contact-form__button">Оставить заявку</button>
+                </div>
+            </div>
+            <button class="contact-form__close-btn js-close-button">закрыть <span>х</span>
+            </button>
+        </form>
     </div>
     <script>
-        var ms=document.createElement("link");ms.rel="stylesheet";ms.href="assets/css/style.min.css?rev=fabd53460bff8e68f0f7a95284139907";document.getElementsByTagName("head")[0].appendChild(ms);
+        var ms=document.createElement("link");ms.rel="stylesheet";ms.href="assets/css/style.min.css?rev=2efc20a10d6473cef7fc285d3f4b7a96";document.getElementsByTagName("head")[0].appendChild(ms);
     </script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="assets/js/jquery-2.2.4.min.js"><\/script>')
     </script>
     <script src="assets/js/plugins.min.js?rev=955d9268bd4e97db199d419dc6a46fa8"></script>
-    <script src="assets/js/app.min.js?rev=5cbc99bc53829ceebf1e901562c888dc"></script>
+    <script src="assets/js/app.min.js?rev=8fc8b5e0384f44325a0e4471440c43eb"></script>
 </body>
 
 </html>

@@ -14,12 +14,12 @@ mixin popup-portfolio-1()
                 .popup-portfolio__row
                     .popup-portfolio__caption Дата:
                     .popup-portfolio__value 3 октября 2015 г.
-            .popup-portfolio__descr 
+            .popup-portfolio__descr
                 p.popup-portfolio__text Из утренних съемок сделали маленький видеоклип и показали во время банкета, что стало сюрпризом для молодоженов и их гостей.
                 p.popup-portfolio__text С женихом познакомились во время яхтинга по Средиземному морю.
         p.popup-portfolio__appeal У вас есть идея своего видеоклипа? <br>Оставьте заявку и я помогу реализовать идею в ральность
         .popup-portfolio__btn-wrapper
-            a(href="contact.html").popup-portfolio__button Оставить заявку
+            a(href="#contact-form").popup-portfolio__button.js-popup Оставить заявку
         button.popup-portfolio__close-btn.js-close-button закрыть <span>х</span>
 
 mixin popup-portfolio-2()
@@ -43,7 +43,7 @@ mixin popup-portfolio-2()
                 p.popup-portfolio__text Так и произошло во время торжества Антона и Регины
         p.popup-portfolio__appeal У вас есть идея своего видеоклипа? <br>Оставьте заявку и я помогу реализовать идею в ральность
         .popup-portfolio__btn-wrapper
-            a(href="contact.html").popup-portfolio__button Оставить заявку
+            a(href="#contact-form").popup-portfolio__button.js-popup Оставить заявку
         button.popup-portfolio__close-btn.js-close-button закрыть <span>х</span>
 
 mixin popup-portfolio-3()
@@ -66,7 +66,7 @@ mixin popup-portfolio-3()
                 p.popup-portfolio__text Жених решил преобразовать традиции и подговорил подруг невесты, сделать необычный выкуп. Поступок сильно порадовал избранницу
         p.popup-portfolio__appeal У вас есть идея своего видеоклипа? <br>Оставьте заявку и я помогу реализовать идею в ральность
         .popup-portfolio__btn-wrapper
-            a(href="contact.html").popup-portfolio__button Оставить заявку
+            a(href="#contact-form").popup-portfolio__button.js-popup Оставить заявку
         button.popup-portfolio__close-btn.js-close-button закрыть <span>х</span>
 
 mixin popup-portfolio-4()
@@ -89,7 +89,7 @@ mixin popup-portfolio-4()
                 p.popup-portfolio__text Свадьба Дамира и Даши проходила на ост. Санторини. В начале они не хотели нанимать видеографа, но пообщавшись со мной, изменили свое решение и спустя несколько лет сказали: “Большое&nbsp;спасибо!”
         p.popup-portfolio__appeal У вас есть идея своего видеоклипа? <br>Оставьте заявку и я помогу реализовать идею в ральность
         .popup-portfolio__btn-wrapper
-            a(href="contact.html").popup-portfolio__button Оставить заявку
+            a(href="#contact-form").popup-portfolio__button.js-popup Оставить заявку
         button.popup-portfolio__close-btn.js-close-button закрыть <span>х</span>
 
 mixin popup-portfolio-5()
@@ -112,7 +112,7 @@ mixin popup-portfolio-5()
                 p.popup-portfolio__text Марат и Виктория, не стеснялись показать свои чувства на камеру
         p.popup-portfolio__appeal У вас есть идея своего видеоклипа? <br>Оставьте заявку и я помогу реализовать идею в ральность
         .popup-portfolio__btn-wrapper
-            a(href="contact.html").popup-portfolio__button Оставить заявку
+            a(href="#contact-form").popup-portfolio__button.js-popup Оставить заявку
         button.popup-portfolio__close-btn.js-close-button закрыть <span>х</span>
 
 mixin popup-portfolio-6()
@@ -135,7 +135,7 @@ mixin popup-portfolio-6()
                 p.popup-portfolio__text Марат и Виктория, не стеснялись показать свои чувства на камеру
         p.popup-portfolio__appeal У вас есть идея своего видеоклипа? <br>Оставьте заявку и я помогу реализовать идею в ральность
         .popup-portfolio__btn-wrapper
-            a(href="contact.html").popup-portfolio__button Оставить заявку
+            a(href="#contact-form").popup-portfolio__button.js-popup Оставить заявку
         button.popup-portfolio__close-btn.js-close-button закрыть <span>х</span>
 
 mixin popup-thankyou()
@@ -143,3 +143,33 @@ mixin popup-thankyou()
         h3.popup-thankyou__title Спасибо!
         p.popup-thankyou__text Спасибо, что оставили заявку. Мы свяжемся с Вами в самое ближайшее время.
         button.button.popup-thankyou__button.js-close-button Закрыть
+
+mixin contact-form()
+    form(action="assets/sendmail.php" method="POST").contact-form.popup#contact-form&attributes(attributes)
+        input(type="hidden" name="form" value="contact-form")
+        h1.contact-form__title Заявка на обратную связь
+        p.contact-form__subtitle Опишите задачу, оставьте контактные данные и&nbsp;я&nbsp;свяжусь с&nbsp;вами
+        .contact-form__main
+            .contact-form__group
+                input(type="text" name="name" placeholder="ФИО").input.input--big.contact-form__input
+                input(type="tel" name="phone" placeholder="Телефон").input.input--big.contact-form__input.js-phone-field
+                input(type="email" name="email" placeholder="Email").input.input--big.contact-form__input
+            .contact-form__textarea-wrapper
+                .textarea.textarea--big
+                    .textarea__placeholder Дата, место, сколько часов съемок и&nbsp;ваши пожелания
+                    textarea(name="message").textarea__textarea
+            h3.contact-form__group-caption Какое видео вы хотите?
+            .contact-form__radio-group
+                .radio
+                    input(type="radio" name="service" id="contact-form-radio-1" value="Свадебное видео" checked).radio__radio
+                    label(for="contact-form-radio-1").radio__label Свадебное
+                .radio
+                    input(type="radio" name="service" id="contact-form-radio-2" value="Love-story").radio__radio
+                    label(for="contact-form-radio-2").radio__label Love-story
+                .radio
+                    input(type="radio" name="service" id="contact-form-radio-3" value="Семейное видео").radio__radio
+                    label(for="contact-form-radio-3").radio__label Семейное
+
+            .contact-form__button-wrapper
+                button(type="submit").contact-form__button Оставить заявку
+        button.contact-form__close-btn.js-close-button закрыть <span>х</span>

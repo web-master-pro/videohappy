@@ -5,7 +5,8 @@ $(document).ready(function(){
         midClick: true,
         removalDelay: 500,
         mainClass: 'mfp-zoom-in',
-        overflowY: 'scroll'
+        overflowY: 'scroll',
+        fixedContentPos: true
     });
 
     $(".popup-portfolio__video").fitVids();
