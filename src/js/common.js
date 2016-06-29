@@ -16,6 +16,15 @@ $(document).ready(function() {
         fixedContentPos: true
     });
 
+    $(".volume").on("click", function(){
+        $(this).toggleClass("on");
+        if ($(this).hasClass("on")) {
+            $(".header__video").prop("muted",false);
+        } else {
+            $(".header__video").prop("muted",true);
+        };
+    });
+
     $('.js-phone-field').mask('+7 (999) 999-99-99');
 
     if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {

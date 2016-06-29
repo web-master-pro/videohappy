@@ -38,8 +38,8 @@
         container(1000px)
         padding 110px 20px 60px
         z-index 2
-        +above(480px)
-            padding 220px 20px 60px
+        // +above(480px)
+        //     padding 220px 20px 60px
         +above(1000px)
             height 100vh
 
@@ -79,12 +79,22 @@
 
     &__headers
         margin 0 auto 6em
-        +above(992px)
-            padding 0 20px
+        padding 0
+        +above(1000px)
+            padding 110px 20px
             position absolute
             top 50%
             left 50%
             transform translate(-50%,-50%)
+
+    &__volume
+        display none
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        +below(999px)
+            display none !important
 
     &__link-down
         display block
@@ -119,6 +129,33 @@
                 opacity 1
         +above(480px)
             bottom 60px
+
+.volume
+    height 60px
+    background url(img/play-sound.png) no-repeat center top
+    color #8cd9ff
+    font()
+    font-size 14px
+    line-height 1
+    text-align center
+    cursor pointer
+    padding-top 40px
+    &:hover
+    &.on
+        background url(img/play-sound-hover.png) no-repeat center top
+
+    &__caption
+        display none
+        &--on
+            ^[0]:hover &
+                display inline
+            ^[0].on:hover &
+                display none
+        &--off
+            ^[0]:hover &
+                display none
+            ^[0].on:hover &
+                display inline
 
 @keyframes link-down
     0%

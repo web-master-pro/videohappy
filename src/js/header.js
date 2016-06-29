@@ -104,6 +104,7 @@
         // What to do once video loads (initial frame)
         onLoad: function () {
             document.querySelector('.header__video-cover').style.display = 'none';
+            document.querySelector('.header__volume').style.display = 'block';
             // document.querySelector('.header__video-overlay').style.display = 'block';
         }
     });
